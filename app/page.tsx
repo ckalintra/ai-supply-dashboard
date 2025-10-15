@@ -56,7 +56,7 @@ export default function Dashboard() {
   const [sales, setSales] = useState<Sale[]>([]);
   const [insights, setInsights] = useState<InsightsData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [chartData, setChartData] = useState([]);
+  const [chartData, setChartData] = useState<{ date: string; sales: number; revenue: number }[]>([]);
   const [refreshing, setRefreshing] = useState(false);
 
   const fetchData = async () => {
